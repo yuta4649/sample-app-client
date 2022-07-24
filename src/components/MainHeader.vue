@@ -4,7 +4,7 @@
 </template>
 <style>
   .main-header {
-    background-color:blue;
+    background-color:#242424;
     color: white;
     width: 100%;
     height: 48px;

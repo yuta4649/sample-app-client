@@ -20,7 +20,9 @@
       >
     </vue-particles>
     <component :is="headerComponent"></component>
-    <router-view @api-global-error="onGlobalError" />
+    <transition mode="out-in">
+      <router-view @api-global-error="onGlobalError" />
+    </transition>
     <div
       class="modal error-dialog"
       v-bind:class="{ 'is-active': errorDialogOpend }"
