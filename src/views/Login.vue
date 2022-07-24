@@ -115,8 +115,7 @@ export default {
 
 <style scoped>
 .container {
-    max-width: 480px;
-    padding-top: 32px;
+    width: 480px;
 }
 .title-container {
     margin-bottom: 16px;

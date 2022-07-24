@@ -62,7 +62,7 @@ export default {
 }
 </style>
 
-<style>
+<style src="./assets/style/common.css">
 .title-box {
   margin: 1rem;
 }
