@@ -19,6 +19,7 @@
       retina_detect="true"
       >
     </vue-particles>
+    <component :is="headerComponent"></component>
     <router-view @api-global-error="onGlobalError" />
     <div
       class="modal error-dialog"
@@ -43,8 +44,27 @@
 </template>
 
 <script>
+import MainHeader from './components/MainHeader.vue'
+import SubHeader from './components/SubHeader.vue'
+
 export default {
   name: "App",
+  components: { MainHeader, SubHeader },
+  computed: {
+    headerComponent() {
+      switch(this.$route.path) {
+        // Login画面ではヘッダーを表示しない
+        case '/login':
+          return null;
+        case '/main':
+          return 'MainHeader';
+        case '/sub':
+          return 'SubHeader';
+        default:
+          return 'MainHeader';
+      }
+    }
+  },
   data: () => {
     return {
       errorDialogOpend: false,
