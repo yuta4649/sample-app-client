@@ -39,9 +39,9 @@
               </p>
             </div>
             <!-- ログインボタン -->
-            <div>
+            <div class="button_wrapper">
               <button
-                class="button is-primary  is-rounded"
+                class="button is-primary is-rounded"
                 type="submit"
               >
                 Login
@@ -119,5 +119,8 @@ export default {
 }
 .title-container {
     margin-bottom: 16px;
+}
+.button_wrapper {
+  text-align:center;
 }
 </style>
