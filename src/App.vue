@@ -13,7 +13,7 @@
         <section class="modal-card-body">
           <p class="is-size-6">{{ errorMessage }}</p>
         </section>
-        <footer class="modal-card-foot dialog-btn">
+        <footer class="modal-card-foot dialog-btns">
           <button class="button" @click="onClickCloseErrorDialog">
             close
           </button>
@@ -45,7 +45,7 @@ export default {
       this.errorMessage = null;
       const errorCode = this.currentErrorCode;
       this.currentErrorCode = null;
-      if (errorCode === "error.s002") {
+      if (errorCode === "error.s004") {
         this.$router.push("/login");
       }
     },

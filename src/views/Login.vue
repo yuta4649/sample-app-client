@@ -41,7 +41,7 @@
             <!-- ログインボタン -->
             <div>
               <button
-                class="button is-primary is-fullwidth is-rounded"
+                class="button is-primary  is-rounded"
                 type="submit"
               >
                 Login
@@ -89,7 +89,7 @@ export default {
             })
             .json();
           sessionInfoRepository.saveLoginInfo(loginResult.user);
-          this.$router.push("/");
+          this.$router.push("/menu");
         },
         true
       );
