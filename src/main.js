@@ -12,8 +12,10 @@ import store from "./store";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import messages from "@/assets/messages.json";
 import sessionInfoRepository from "./repository/sessionInfoRepository";
+import VueParticles from "vue-particles";
 
 Vue.use(VueI18n);
+Vue.use(VueParticles);
 const i18n = new VueI18n({ locale: "ja", messages });
 
 library.add(fas);

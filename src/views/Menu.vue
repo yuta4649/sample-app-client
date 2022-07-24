@@ -2,7 +2,7 @@
   <div id="menu">
     <section class="container">
         <div class="box">
-          <button class="button is-primary" @click="onClickTodo">
+          <button class="button is-primary pushright" @click="onClickTodo">
             TODO
           </button>
         </div>

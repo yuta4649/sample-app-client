@@ -1,5 +1,24 @@
 <template>
   <div id="app">
+    <vue-particles
+      color="#00d1b2"
+      :particleOpacity="0.7"
+      linesColor="#00d1b2"
+      :particlesNumber="80"
+      shapeType="circle"
+      :particleSize="3"
+      :linesWidth="1.5"
+      :lineLinked="true"
+      :lineOpacity="0.4"
+      :linesDistance="150"
+      :moveSpeed="5"
+      :hoverEffect="true"
+      hoverMode="grab"
+      :clickEffect="true"
+      clickMode="push"
+      retina_detect="true"
+      >
+    </vue-particles>
     <router-view @api-global-error="onGlobalError" />
     <div
       class="modal error-dialog"
@@ -62,7 +81,7 @@ export default {
 }
 </style>
 
-<style src="./assets/style/common.css">
+<style src="./assets/style/css/common.css">
 .title-box {
   margin: 1rem;
 }
