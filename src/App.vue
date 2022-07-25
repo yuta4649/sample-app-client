@@ -46,8 +46,8 @@
 </template>
 
 <script>
-import MainHeader from './components/MainHeader.vue'
-import SubHeader from './components/SubHeader.vue'
+import MainHeader from './components/header/MainHeader.vue'
+import SubHeader from './components/header/SubHeader.vue'
 
 export default {
   name: "App",
