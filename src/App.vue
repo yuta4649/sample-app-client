@@ -100,8 +100,11 @@ export default {
 .modal-card-body p {
   min-height: 50px;
 }
-.error-dialog .dialog-btns {
+.error-dialog {
   justify-content: center;
+}
+.dialog-btns {
+  text-align: center;
 }
 </style>
 
