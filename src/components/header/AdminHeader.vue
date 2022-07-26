@@ -25,11 +25,6 @@ import { commonApi } from "@/api";
 
 export default {
   name: 'AdminHeader',
-  props: {
-    title: String,
-    isAdmin: Boolean,
-    isRoot: Boolean,
-  },
   data: () => {
     return {
       showFlg: false,

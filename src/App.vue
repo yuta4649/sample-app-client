@@ -52,27 +52,29 @@ import CommonHeader from './components/header/CommonHeader.vue'
 export default {
   name: "App",
   components: { AdminHeader, CommonHeader },
-  computed: {
-    headerComponent() {
-      switch(this.$route.path) {
-        // Login画面ではヘッダーを表示しない
-        case '/login':
-          return null;
-        case '/main':
-          return 'AdminHeader';
-        case '/sub':
-          return 'CommonHeader';
-        default:
-          return 'AdminHeader';
-      }
-    }
-  },
   data: () => {
     return {
       errorDialogOpend: false,
       errorMessage: null,
       currentErrorCode: null,
     };
+  },
+  computed: {
+    headerComponent() {
+      if (this.$route.path === '/login') {
+        // Login画面ではヘッダーを表示しない
+        return null;
+      } else {
+        switch (JSON.parse(window.sessionStorage.getItem('login-info')).authorizationType) {
+          case 'ROLE_ROOT':
+            return AdminHeader;
+          case 'ROLE_ADMIN':
+            return AdminHeader;
+          default:
+            return CommonHeader;
+        }
+      }
+    }
   },
   methods: {
     onGlobalError(payload) {

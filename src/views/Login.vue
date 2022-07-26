@@ -90,6 +90,8 @@ export default {
             .json();
           sessionInfoRepository.saveLoginInfo(loginResult.user);
           this.$router.push("/menu");
+          console.log(loginResult)
+          console.log(JSON.parse(window.sessionStorage.getItem('login-info')))
         },
         true
       );
