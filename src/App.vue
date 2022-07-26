@@ -46,12 +46,12 @@
 </template>
 
 <script>
-import MainHeader from './components/header/AdminHeader.vue'
-import SubHeader from './components/header/CommonHeader.vue'
+import AdminHeader from './components/header/AdminHeader.vue'
+import CommonHeader from './components/header/CommonHeader.vue'
 
 export default {
   name: "App",
-  components: { MainHeader, SubHeader },
+  components: { AdminHeader, CommonHeader },
   computed: {
     headerComponent() {
       switch(this.$route.path) {
@@ -59,11 +59,11 @@ export default {
         case '/login':
           return null;
         case '/main':
-          return 'MainHeader';
+          return 'AdminHeader';
         case '/sub':
-          return 'SubHeader';
+          return 'CommonHeader';
         default:
-          return 'MainHeader';
+          return 'AdminHeader';
       }
     }
   },
