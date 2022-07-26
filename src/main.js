@@ -13,6 +13,7 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import messages from "@/assets/messages.json";
 import sessionInfoRepository from "./repository/sessionInfoRepository";
 import VueParticles from "vue-particles";
+import vuetify from "@/plugins/vuetify.js";
 
 Vue.use(VueI18n);
 Vue.use(VueParticles);
@@ -46,4 +47,5 @@ new Vue({
   store,
   i18n,
   render: (h) => h(App),
+  vuetify,
 }).$mount("#app");

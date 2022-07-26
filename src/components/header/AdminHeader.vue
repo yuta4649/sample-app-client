@@ -1,23 +1,46 @@
 <template>
-  <div v-bind:class="{ open: showFlg }">
-    <header class="admin-header">
-      <nav class="nav">
-        <ul class="topnav">
-          <li class="change">
-            <a class="active" @click="onClickTop">SampleApplication</a>
-          </li>
-          <li class="right"><a @click="onClickLogout">Logout</a></li>
-          <li class="right"><a @click="onClickSetting">Setting</a></li>
-        </ul>
-      </nav>
-      <button type="button" id="navbtn" v-on:click="showFlg = !showFlg"></button>
-      <div class="container">
-        <div class="title-box">
-          <h1 class="title">{{ title }}</h1>
-        </div>
-      </div>
-    </header>
-  </div>
+  <v-card
+    class="mx-auto overflow-hidden"
+  >
+    <v-app-bar
+      color="deep-purple"
+      dark
+    >
+      <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
+
+      <v-toolbar-title>Title</v-toolbar-title>
+    </v-app-bar>
+
+    <v-navigation-drawer
+      v-model="drawer"
+      absolute
+      temporary
+    >
+      <v-list
+        nav
+        dense
+      >
+        <v-list-item-group
+          v-model="group"
+          active-class="deep-purple--text text--accent-4"
+        >
+          <v-list-item>
+            <v-list-item-icon>
+              <v-icon>mdi-home</v-icon>
+            </v-list-item-icon>
+            <v-list-item-title>Home</v-list-item-title>
+          </v-list-item>
+
+          <v-list-item>
+            <v-list-item-icon>
+              <v-icon>mdi-account</v-icon>
+            </v-list-item-icon>
+            <v-list-item-title>Account</v-list-item-title>
+          </v-list-item>
+        </v-list-item-group>
+      </v-list>
+    </v-navigation-drawer>
+  </v-card>
 </template>
 
 <script>
@@ -28,6 +51,8 @@ export default {
   data: () => {
     return {
       showFlg: false,
+      drawer: false,
+      group: null,
     };
   },
   methods: {

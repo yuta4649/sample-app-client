@@ -19,7 +19,7 @@
       retina_detect="true"
       >
     </vue-particles>
-    <component :is="headerComponent"></component>
+    <component :is="headerComponent" />
     <transition mode="out-in">
       <router-view @api-global-error="onGlobalError" />
     </transition>
