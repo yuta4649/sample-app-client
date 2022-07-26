@@ -1,48 +1,50 @@
 <template>
-  <div id="app">
-    <vue-particles
-      color="#00d1b2"
-      :particleOpacity="0.7"
-      linesColor="#00d1b2"
-      :particlesNumber="80"
-      shapeType="circle"
-      :particleSize="3"
-      :linesWidth="1.5"
-      :lineLinked="true"
-      :lineOpacity="0.4"
-      :linesDistance="150"
-      :moveSpeed="5"
-      :hoverEffect="true"
-      hoverMode="grab"
-      :clickEffect="true"
-      clickMode="push"
-      retina_detect="true"
+  <v-app id="app">
+    <div>
+      <vue-particles
+        color="#00d1b2"
+        :particleOpacity="0.7"
+        linesColor="#00d1b2"
+        :particlesNumber="80"
+        shapeType="circle"
+        :particleSize="3"
+        :linesWidth="1.5"
+        :lineLinked="true"
+        :lineOpacity="0.4"
+        :linesDistance="150"
+        :moveSpeed="5"
+        :hoverEffect="true"
+        hoverMode="grab"
+        :clickEffect="true"
+        clickMode="push"
+        retina_detect="true"
+        >
+      </vue-particles>
+      <component :is="headerComponent" />
+      <transition mode="out-in">
+        <router-view @api-global-error="onGlobalError" />
+      </transition>
+      <div
+        class="modal error-dialog"
+        v-bind:class="{ 'is-active': errorDialogOpend }"
       >
-    </vue-particles>
-    <component :is="headerComponent" />
-    <transition mode="out-in">
-      <router-view @api-global-error="onGlobalError" />
-    </transition>
-    <div
-      class="modal error-dialog"
-      v-bind:class="{ 'is-active': errorDialogOpend }"
-    >
-      <div class="modal-background"></div>
-      <div class="modal-card">
-        <header class="modal-card-head">
-          <p class="modal-card-title">ERROR</p>
-        </header>
-        <section class="modal-card-body">
-          <p class="is-size-6">{{ errorMessage }}</p>
-        </section>
-        <footer class="modal-card-foot dialog-btns">
-          <button class="button" @click="onClickCloseErrorDialog">
-            close
-          </button>
-        </footer>
+        <div class="modal-background"></div>
+        <div class="modal-card">
+          <header class="modal-card-head">
+            <p class="modal-card-title">ERROR</p>
+          </header>
+          <section class="modal-card-body">
+            <p class="is-size-6">{{ errorMessage }}</p>
+          </section>
+          <footer class="modal-card-foot dialog-btns">
+            <button class="button" @click="onClickCloseErrorDialog">
+              close
+            </button>
+          </footer>
+        </div>
       </div>
     </div>
-  </div>
+  </v-app>
 </template>
 
 <script>
