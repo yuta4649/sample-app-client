@@ -108,11 +108,4 @@ export default {
 }
 </style>
 
-<style src="./assets/style/css/common.css">
-.title-box {
-  margin: 1rem;
-}
-.button-area {
-  margin-top: 3rem;
-}
-</style>
+<style src="./assets/style/css/common.css"></style>
