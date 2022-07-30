@@ -8,7 +8,6 @@
       <v-btn icon>
         <v-icon>mdi-magnify</v-icon>
       </v-btn>
-
       <v-menu
         bottom
       >
@@ -20,13 +19,12 @@
             <v-icon>mdi-dots-vertical</v-icon>
           </v-btn>
         </template>
-
         <v-list>
-          <v-list-item>
+          <v-list-item link>
             <v-list-item-title>Setting</v-list-item-title>
           </v-list-item>
-          <v-list-item>
-            <v-list-item-title>Logout</v-list-item-title>
+          <v-list-item link>
+            <v-list-item-title @click="onClickLogout">Logout</v-list-item-title>
           </v-list-item>
         </v-list>
       </v-menu>
