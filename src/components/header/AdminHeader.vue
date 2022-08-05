@@ -54,6 +54,12 @@
             </v-list-item-icon>
             <v-list-item-title>Account</v-list-item-title>
           </v-list-item>
+          <v-list-item>
+            <v-list-item-icon>
+              <v-icon>fas fa-list</v-icon>
+            </v-list-item-icon>
+            <v-list-item-title>ToDo</v-list-item-title>
+          </v-list-item>
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
