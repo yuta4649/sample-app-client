@@ -1,5 +1,5 @@
 <template>
-  <div id="menu">
+  <div id="home">
     <section class="container">
         <div class="box">
           <button class="button is-primary pushright" @click="onClickTodo">
