@@ -89,7 +89,7 @@ export default {
             })
             .json();
           sessionInfoRepository.saveLoginInfo(loginResult.user);
-          this.$router.push("/menu");
+          this.$router.push("/");
         },
         true
       );

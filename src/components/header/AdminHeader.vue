@@ -40,21 +40,20 @@
       >
         <v-list-item-group
           v-model="group"
-          active-class="deep-purple--text text--accent-4"
         >
-          <v-list-item>
+          <v-list-item  @click="onClickHome">
             <v-list-item-icon>
               <v-icon>mdi-home</v-icon>
             </v-list-item-icon>
             <v-list-item-title>Home</v-list-item-title>
           </v-list-item>
-          <v-list-item>
+          <v-list-item @click="onClickAccount">
             <v-list-item-icon>
               <v-icon>mdi-account</v-icon>
             </v-list-item-icon>
             <v-list-item-title>Account</v-list-item-title>
           </v-list-item>
-          <v-list-item>
+          <v-list-item  @click="onClickTodo">
             <v-list-item-icon>
               <v-icon>fas fa-list</v-icon>
             </v-list-item-icon>
@@ -92,6 +91,15 @@ export default {
     },
     onClickSetting() {
       this.$router.push('/setting');
+    },
+    onClickAccount() {
+      this.$router.push('/account');
+    },
+    onClickHome() {
+      this.$router.push('/');
+    },
+    onClickTodo() {
+      this.$router.push('/todo');
     }
   }
 }

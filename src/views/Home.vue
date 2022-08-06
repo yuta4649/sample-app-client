@@ -1,18 +1,27 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="menu">
+    <section class="container">
+        <div class="box">
+          <button class="button is-primary pushright" @click="onClickTodo">
+            TODO
+          </button>
+        </div>
+    </section>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
 export default {
-  name: 'Home',
-  components: {
-    HelloWorld
-  }
-}
+  name: 'Menu',
+  methods: {
+    // TODO画面へ遷移する
+    onClickTodo() {
+      this.$router.push('/todo');
+    },
+  },
+};
 </script>
+
+<style scoped>
+
+</style>
