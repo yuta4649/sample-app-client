@@ -105,5 +105,8 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+v-toolbar-title {
+  font-family: serif;
+}
 </style>

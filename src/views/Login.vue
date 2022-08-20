@@ -4,7 +4,7 @@
       <div class="container">
         <div class="box">
           <div class="title-container">
-            <h1 class="title">SampleApplication</h1>
+            <h1>SampleApplication</h1>
           </div>
           <form @submit.prevent="onSubmit">
             <error-message :errors="errors" />
@@ -114,6 +114,9 @@ export default {
 </script>
 
 <style scoped>
+h1 {
+  font-family: serif;
+}
 .container {
     width: 480px;
 }
